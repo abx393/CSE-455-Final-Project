@@ -81,7 +81,10 @@
                     <div class='experience card'>
                         <div class='experience description'>
                             <p>
-                                We use the VGGNet model that is pre-trained on ImageNet. We initialize the combined image to the content image, and we pass the content image, style image, and combined image to the model. The model tune the pixel values of the combined image until it represents a combination of the content image and the style image. Since we have a content loss and a style loss, we stop training the model when the sum of both losses is minimized.
+                                We use the VGGNet model that is pre-trained on ImageNet. We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model. The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
+                            </p>
+                            <p>
+                                Our loss function for this model consists of a style loss and a content loss. We use the output of the higher layers of the convolutional neural network to define the content loss. Since the style captures low-level features, we use the output of the lower layers of the network to define the style loss. We stop training the model when the sum of the style and content losses is minimized.
                             </p>
                         </div>
                     </div>

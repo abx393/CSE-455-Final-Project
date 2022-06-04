@@ -84,7 +84,8 @@
                                 We use the VGGNet model that is pre-trained on ImageNet. We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model. The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
                             </p>
                             <p>
-                                Our loss function for this model consists of a style loss and a content loss. We use the output of the higher layers of the convolutional neural network to define the content loss. Since the style captures low-level features, we use the output of the lower layers of the network to define the style loss. We stop training the model when the sum of the style and content losses is minimized.
+                                Our loss function for this model consists of a weighted sum of the style loss and the content loss. We use the output of the higher layers of the convolutional neural network to define the content loss. Since the style captures low-level features, we use the output of the lower layers of the network to define the style loss. We stop training the model when the sum of the style and content losses is minimized.
+                                We experimented with a range of weights for the style loss and content loss. We also found that using a L1 loss function worked better than an L2 loss function.
                             </p>
                         </div>
                     </div>

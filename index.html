@@ -94,8 +94,8 @@
                                 Since the style is defined by lower-level features, the style loss tends to use higher weights for lower layers than higher layers.
                             </p>
                             <p class='text-small'>
-                                We stop training the model when the weighted sum of the style and content losses is minimized.
-                                We experimented with a range of weights for the style and content losses, and found that the generated images looked best when the style loss weight dominated the content loss weight.
+                                Since the model's loss function consists of a weighted sum of the style loss and content loss,
+                                we experimented with a range of weights for the style and content losses, and found that the generated images looked best when the style loss weight dominated the content loss weight.
                                 In practice, we found that using a L1 loss function worked better than an L2 loss function, and produced combined images with more apparent influence from the style image.
                             </p>
                         </div>

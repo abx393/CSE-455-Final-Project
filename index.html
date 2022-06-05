@@ -92,15 +92,9 @@
                                 where the Gram matrix is a specific type of correlation matrix.
                             </p>
                             <p>
-                                The contribution of each layer in the style information is given by the following.
-                            </p>
-                            <img src='assets/images/style_eq.PNG' class='project image' width="500">
-                            <p>
                                 Since the style is defined by lower-level features, the style loss tends to use higher weights for lower layers than higher layers,
                                 so the style loss is defined as follows.
                             </p>
-
-                            <img src='assets/images/style_loss_eq.PNG' class='project image' width="500">
                             <p>
                                 We stop training the model when the weighted sum of the style and content losses is minimized.
                                 We experimented with a range of weights for the style loss and content loss.

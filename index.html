@@ -66,7 +66,7 @@
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience content flex-vertical'>
                             <div class='experience description'>
-                                <p class='text-small'>We built a neural style transfer model to take a content image and a style image and output the content image with the style from the style image applied to it.</p>
+                                <p class='text-small'>We build a neural style transfer model to take a content image and a style image and output the content image with the style from the style image applied to it.</p>
                             </div>
                         </div>
                     </div>
@@ -81,11 +81,11 @@
                         <div class='experience description'>
                             <p>
                                 We use the VGGNet model architecture with weights pre-trained on ImageNet.
-                                We initialize the combined image to the content image, and we pass the content image, style image, and combined image to the model.
-                                The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
+                                We initialize the combined image to the content image, and pass the content image, style image, and combined image into the model.
+                                The model tunes the pixel values of the combined image until it represents a good combination of the content image and the style image.
                             </p>
                             <p>
-                                Our loss function for this model consists of a weighted sum of the style loss and the content loss.
+                                The model's loss function consists of a weighted sum of a style loss and content loss.
                                 The content loss is defined as the L1 distance between the output of the intermediate layers of the network for the content image and for the combined image.
                                 The style loss is defined as the L1 distance between Gram matrices computed on the output of the intermediate layers of the network for the style image and for the combined image.
                                 The Gram matrix we use measures the correlations between outputs of a specific layer.
@@ -95,7 +95,7 @@
                             </p>
                             <p>
                                 We stop training the model when the weighted sum of the style and content losses is minimized.
-                                We experimented with a range of weights for the style loss and content loss, and found that the generated images looked best when the style loss weight dominated the content loss weight.
+                                We experimented with a range of weights for the style and content losses, and found that the generated images looked best when the style loss weight dominated the content loss weight.
                                 In practice, we found that using a L1 loss function worked better than an L2 loss function, and produced combined images with more apparent influence from the style image.
                             </p>
                         </div>

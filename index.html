@@ -23,16 +23,17 @@
     </head>
     <body>
         <div class='profile'>
-            <div class='profile-picture-container center'>
-                <img src='assets/images/arnav-pic.jpg' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
+            <div class='profile-picture-container '>
+                <img src='assets/images/arnav_illusion.png' class='profile-picture disable-select disable-drag' alt='Profile Picture' oncontextmenu="return false">
             </div>
             <div class='profile-description'>
                 <h1 class='title-large'>Neural Style Transfer</h1>
                 <p class='text-medium'>CSE 455 Final Project: Abhinav Bandari, Arnav Thareja, Karthikeya Vemuri, Alan Wu</p>
                 <div class="icons">
+                    <a target="_blank" href="https://colab.research.google.com/drive/1mmPmpGhpqiboVYz_KV5yrl0dgUPcr7rM?usp=sharing" class='center'><div class='icon center'><i class="fas fa-solid fa-code"></i></div></a>
                     <a target="_blank" href="https://www.linkedin.com/in/arnavthareja/" class='center'><div class='icon center'><i class="fab fa-linkedin fa-2x"></i></div></a>
-                    <a target="_blank" href="https://github.com/arnavthareja/" class='center'><div class='icon center'><i class="fab fa-github fa-2x"></i></div></a>
-                    <a target="_blank" href="mailto:athareja@uw.edu" class='center'><div class='icon center'><i class="fas fa-envelope fa-2x"></i></div></a>
+                    <a target="_blank" href="https://github.com/abx393/CSE-455-Final-Project/" class='center'><div class='icon center'><i class="fab fa-github fa-2x"></i></div></a>
+                    <a target="_blank" href="mailto:athareja@uw.edu,abandari@uw.edu,karkeys1@uw.edu,alan8621@uw.edu" class='center'><div class='icon center'><i class="fas fa-envelope fa-2x"></i></div></a>
                 </div>
             </div>
             <div class='down-arrow center'>
@@ -64,10 +65,8 @@
                 <div class='section-container flex-vertical'>
                     <div class='experience card flex-horizontal' data-aos='fade'>
                         <div class='experience content flex-vertical'>
-                            <div class='experience title flex-vertical'>
-                            </div>
                             <div class='experience description'>
-                                <p class='text-small'>We build a neural style transfer model, a model to take a content image and a style image and output the content image with the style from the style image applied to it.</p>
+                                <p class='text-small'>We built a neural style transfer model to take a content image and a style image and output the content image with the style from the style image applied to it.</p>
                             </div>
                         </div>
                     </div>
@@ -81,11 +80,24 @@
                     <div class='experience card'>
                         <div class='experience description'>
                             <p>
-                                We use the VGGNet model that is pre-trained on ImageNet. We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model. The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
+                                We use the VGGNet model architecture with weights pre-trained on ImageNet.
+                                We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model.
+                                The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
                             </p>
                             <p>
-                                Our loss function for this model consists of a weighted sum of the style loss and the content loss. We use the output of the higher layers of the convolutional neural network to define the content loss. Since the style captures low-level features, we use the output of the lower layers of the network to define the style loss. We stop training the model when the sum of the style and content losses is minimized.
-                                We experimented with a range of weights for the style loss and content loss. We also found that using a L1 loss worked better than an L2 loss function.
+                                Our loss function for this model consists of a weighted sum of the style loss and the content loss.
+                                The content loss is defined as the L1 distance between the output of the intermediate layers of the network for the content image and for the combined image.
+                                The style loss is defined as the L1 distance between the Gram matrices computed on the output of the intermediate layers of the network for the style image and for the combined image,
+                                where the Gram matrix is a specific type of correlation matrix.
+                            </p>
+                            <p>
+                                Since the style is defined by lower-level features, the style loss tends to use higher weights for lower layers than higher layers,
+                                so the style loss is defined as follows.
+                            </p>
+                            <p>
+                                We stop training the model when the weighted sum of the style and content losses is minimized.
+                                We experimented with a range of weights for the style loss and content loss.
+                                In practice, we found that using a L1 loss function worked better than an L2 loss function.
                             </p>
                         </div>
                     </div>
@@ -313,13 +325,8 @@
                 </div>
                 <div class="section-container flex-vertical">
                     <div class='resume card'>
-                        <a target='_blank' href='Resume' class="full plain">
-                            <h2 class='text-medium'>Open my resume in another tab</h2>
-                        </a>
-                    </div>
-                    <div class='resume card'>
-                        <a href='Resume/Arnav-Thareja-Resume.pdf' download='Arnav-Thareja-Resume.pdf' class="full plain">
-                            <h2 class='text-medium'>Download my resume</h2>
+                        <a target='_blank' href="https://colab.research.google.com/drive/1mmPmpGhpqiboVYz_KV5yrl0dgUPcr7rM?usp=sharing" class="full plain">
+                            <h2 class='text-medium'>View Google Colab Notebook</h2>
                         </a>
                     </div>
                 </div>

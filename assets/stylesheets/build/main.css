@@ -609,6 +609,9 @@ footer p {
   margin: 0;
   padding: 0;
 }
+footer a {
+  color: var(--main-text-color);
+}
 
 .dark-mode-slider {
   width: 5rem;

@@ -81,11 +81,30 @@
                     <div class='experience card'>
                         <div class='experience description'>
                             <p>
-                                We use the VGGNet model that is pre-trained on ImageNet. We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model. The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
+                                We use the VGGNet model architecture with weights pre-trained on ImageNet.
+                                We initialize the combined image to random pixel values, and we pass the content image, style image, and combined image to the model.
+                                The model tunes the pixel values of the combined image until it represents a combination of the content image and the style image.
                             </p>
                             <p>
-                                Our loss function for this model consists of a weighted sum of the style loss and the content loss. We use the output of the higher layers of the convolutional neural network to define the content loss. Since the style captures low-level features, we use the output of the lower layers of the network to define the style loss. We stop training the model when the sum of the style and content losses is minimized.
-                                We experimented with a range of weights for the style loss and content loss. We also found that using a L1 loss worked better than an L2 loss function.
+                                Our loss function for this model consists of a weighted sum of the style loss and the content loss.
+                                The content loss is defined as the L1 distance between the output of the intermediate layers of the network for the content image and for the combined image.
+                                The style loss is defined as the L1 distance between the Gram matrices computed on the output of the intermediate layers of the network for the style image and for the combined image,
+                                where the Gram matrix is a specific type of correlation matrix.
+                            </p>
+                            <p>
+                                The contribution of each layer in the style information is given by the following.
+                            </p>
+                            <img src='assets/images/style_eq.PNG' class='project image' width="500">
+                            <p>
+                                Since the style is defined by lower-level features, the style loss tends to use higher weights for lower layers than higher layers,
+                                so the style loss is defined as follows.
+                            </p>
+
+                            <img src='assets/images/style_loss_eq.PNG' class='project image' width="500">
+                            <p>
+                                We stop training the model when the weighted sum of the style and content losses is minimized.
+                                We experimented with a range of weights for the style loss and content loss.
+                                In practice, we found that using a L1 loss function worked better than an L2 loss function.
                             </p>
                         </div>
                     </div>
@@ -99,7 +118,7 @@
                 <div class='section-container grid-3'>
                     <div class='project card flex-vertical' data-aos='fade'>
                         <div class='project image-container center'>
-                            <img src='assets/images/picasso.png' class='project image'>
+                            <img src='assets/images/picasso.png' width="100" height="100">
                         </div>
                         <div class='project title'>
                             <p class='title-small'>Style Image</p>

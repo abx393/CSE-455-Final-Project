@@ -10,6 +10,6 @@ Website theme from [Arnav Thareja](https://arnavthareja.github.io)
 
 | Style Image | Content Image | Combined Image |
 | --- | --- | --- |
-| <img src="assets/images/picasso.png" width="300" height="300"> | <img src="assets/images/forest_content.png" width="300" height="300"> | <img src="assets/images/forest_picasso.png" width="300" height="300"> |
-| <img src="assets/images/wave.jpg" width="300" height="300"> | <img src="assets/images/paradise.jpg" width="300" height="300"> | <img src="assets/images/paradise_wave.jpg" width="300" height="300"> |
-| <img src="assets/images/illusion.jpg" width="300" height="300"> | <img src="assets/images/capitol.png" width="300" height="300"> | <img src="assets/images/capitol_illusion.png" width="300" height="300"> |
+| <img src="assets/images/picasso.png" width="250" height="250"> | <img src="assets/images/forest_content.png" width="250" height="250"> | <img src="assets/images/forest_picasso.png" width="250" height="250"> |
+| <img src="assets/images/wave.jpg" width="250" height="250"> | <img src="assets/images/paradise.jpg" width="250" height="250"> | <img src="assets/images/paradise_wave.jpg" width="250" height="250"> |
+| <img src="assets/images/illusion.jpg" width="250" height="250"> | <img src="assets/images/capitol.png" width="250" height="250"> | <img src="assets/images/capitol_illusion.png" width="250" height="250"> |

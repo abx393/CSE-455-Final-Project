@@ -8,5 +8,6 @@ Website theme from [Arnav Thareja](https://arnavthareja.github.io)
 
 | Style Image | Content Image | Combined Image |
 | --- | --- | --- |
-| ![](assets/images/picasso.png) | List all new or modified files | d |
-| git diff | Show file differences that haven't been staged | d |
+| ![](assets/images/picasso.png) | ![](assets/images/forest_content.png) | ![](assets/images/forest_picasso.png) |
+| ![](assets/images/wave.png) | ![](assets/images/paradise.png) | ![](assets/images/paradise_wave.png) |
+| ![](assets/images/illusion.png) | ![](assets/images/capitol_picasso.png) | ![](assets/images/capitol_illusion.png) |
